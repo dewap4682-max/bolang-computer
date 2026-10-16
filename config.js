@@ -23,7 +23,7 @@ window.SITE = {
     teleponTampil: "0878-3536-9249",          // Nomor yang ditampilkan di website
     email: "",                                // Kosongkan jika tidak ada — baris email otomatis disembunyikan
     alamat: "Jl. Bone Barat Utama No. 15B, Banyuanyar, Banjarsari, Surakarta, Jawa Tengah 57137",
-    areaLayanan: "Kota Solo, Colomadu, Ngemplak, Kartasura, Gondangrejo & sekitarnya",
+    areaLayanan: "Kota Solo, Colomadu, Ngemplak, Kartasura, Gondangrejo & SoloRya",
     radiusGratisKm: 5,                        // Radius antar-jemput gratis (km)
 
     // Link Google Maps (buka Google Maps > Bagikan > Salin link)
