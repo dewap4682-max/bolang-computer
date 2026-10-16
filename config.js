@@ -105,7 +105,7 @@ window.SITE = {
      harga: angka "mulai dari" (tanpa titik). Gunakan hargaLabel untuk teks bebas.
      terkait: kata kunci untuk menampilkan rincian harga di jendela detail.
      ------------------------------------------------------------------ */
-  layanan: [
+  layanan: [ harga
     {
       id: "servis-laptop", kategori: "laptop", ikon: "laptop", populer: true,
       nama: "Servis Laptop Gaming & Harian",
