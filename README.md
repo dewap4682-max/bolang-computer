@@ -1,99 +1,66 @@
 # Website Bolang Computer — Servis Laptop & PC Gaming di Solo
 
+🌐 **Alamat website:** https://dewap4682-max.github.io/bolang-computer/
+
 Website satu halaman yang interaktif untuk **Bolang Computer**, Jl. Bone Barat Utama No. 15B, Banyuanyar, Banjarsari, Surakarta.
-Isinya: servis laptop & PC gaming, rakit PC, upgrade, install ulang, recovery data, konsol, printer, jaringan & CCTV, serta home service.
+Dibuat dengan **HTML, CSS, dan JavaScript murni** (tanpa framework) dan di-hosting gratis di **GitHub Pages**.
 
-Dibuat dengan **HTML, CSS, dan JavaScript murni** (tanpa framework), sehingga ringan dan bisa di-hosting gratis di **GitHub Pages**.
-
-> ⚠️ **Masih berupa CONTOH. Ganti sebelum link website disebarkan:**
+> ⚠️ **Masih berupa CONTOH. Sebaiknya diganti:**
 > - testimoni pelanggan, rating "4,9 dari 1.200+ ulasan", angka statistik (5.000+ perangkat, 8+ tahun);
 > - harga layanan & paket, serta promo (diagnosa gratis, garansi 90 hari, antar-jemput gratis radius 5 km);
 > - foto (masih ilustrasi);
 > - link Instagram (masih kosong, jadi ikonnya disembunyikan).
 >
-> Semuanya bisa diubah di `assets/js/config.js`. Lihat [Checklist](#checklist-sebelum-link-disebarkan).
+> Semuanya diubah di file `config.js`. Lihat [Checklist](#checklist).
 
 ---
 
-## Fitur
+## Daftar file
 
-| Bagian | Isi |
+Semua file berada di **satu tempat (tanpa folder)**, jadi mudah diunggah ke GitHub, termasuk dari HP.
+
+| File | Isi |
 |---|---|
-| **Top bar** | Promo + status **Buka/Tutup real-time** (WIB) |
-| **Navbar** | Menempel saat di-scroll, menu aktif otomatis, menu hamburger di HP |
-| **Hero** | Judul, tombol Booking & Konsultasi WA, rating, angka statistik berjalan |
-| **Layanan** | 16 layanan, **filter per kategori**, popup detail + rincian harga |
-| **Harga** | Paket Basic / Gamer / Pro (**Laptop ↔ PC**), tabel harga dengan **pencarian** dan tombol **Pilih** (langsung masuk ke form booking) |
-| **Proses & Keunggulan** | 5 langkah servis dan 6 alasan memilih Bolang Computer |
-| **Banner Rakit PC** | Ajakan konsultasi rakit PC via WhatsApp |
-| **Testimoni** | Carousel otomatis (bisa di-swipe di HP) |
-| **FAQ** | Akordeon + pencarian pertanyaan |
-| **Booking** | Form dengan validasi → **kode booking** → pesan otomatis terkirim ke **WhatsApp 0878-3536-9249** |
-| **Kontak** | Alamat, peta, jam operasional (hari ini disorot) |
-| **Lainnya** | Tombol WA melayang, kembali ke atas, animasi saat scroll, SEO dasar (data LocalBusiness untuk Google) |
+| `index.html` | Halaman utama (struktur & teks) |
+| `config.js` | ★ **Data usaha, layanan, harga, testimoni, FAQ.** File yang paling sering diedit |
+| `style.css` | Tampilan (warna, ukuran, layout) |
+| `app.js` | Logika interaktif (tidak perlu diubah) |
+| `hero.jpg`, `workshop.jpg`, `rakit-pc.jpg` | Foto di website |
+| `og-image.jpg` | Gambar pratinjau saat link dibagikan di WhatsApp/Facebook |
+| `plus-jakarta-sans.woff2` | Font |
+| `README.md` | Panduan ini |
 
 ---
 
-## Struktur folder
+## Cara upload / update ke GitHub
 
-```
-├── index.html            ← halaman utama
-├── .nojekyll             ← penanda untuk GitHub Pages (biarkan saja)
-├── README.md             ← panduan ini
-└── assets/
-    ├── css/style.css     ← tampilan (warna, ukuran, layout)
-    ├── js/config.js      ← ★ DATA USAHA, layanan, harga, testimoni, FAQ
-    ├── js/app.js         ← logika interaktif (tidak perlu diubah)
-    ├── fonts/plus-jakarta-sans-latin.woff2
-    └── img/hero.jpg, workshop.jpg, rakit-pc.jpg
-```
+Website ini ada di repository **`bolang-computer`** milik akun **dewap4682-max**.
 
----
+### Upload semua file (pertama kali, atau setelah perbaikan)
+1. Download zip, lalu **ekstrak**:
+   - HP Android: buka di aplikasi *Files*, ketuk zip, pilih *Ekstrak*.
+   - iPhone: ketuk zip di aplikasi *Files*.
+   - Komputer: klik kanan, pilih *Extract All*.
+2. Buka repository di github.com → **Add file → Upload files**.
+3. Ketuk/klik **choose your files**, lalu **pilih SEMUA file** hasil ekstrak (10 file). Bisa juga diseret ke halaman tersebut di komputer.
+4. Tunggu sampai semua file muncul di daftar, lalu klik **Commit changes**.
+   - File dengan nama yang sama otomatis **diganti** dengan versi baru.
+5. Tunggu 1–3 menit, lalu buka website. Kalau tampilan belum berubah, tutup lalu buka lagi browsernya (di komputer: Ctrl+F5). GitHub menyimpan cache hingga ±10 menit.
 
-## Online-kan dengan GitHub Pages (gratis)
+### Edit langsung di GitHub (tanpa upload)
+Cocok untuk mengubah harga, jam buka, teks, dll.:
+1. Buka repository dan klik file **`config.js`**.
+2. Klik ikon **pensil ✏️ (Edit)**.
+3. Ubah isinya, lalu klik **Commit changes**. Website ter-update otomatis dalam beberapa menit.
 
-Lakukan dari **laptop/komputer**, karena mengunggah folder lewat HP cukup sulit.
-
-### Langkah 1 — Siapkan file
-Download **`bolang-computer-website.zip`**, lalu ekstrak (klik kanan → *Extract All*).
-Anda akan mendapat folder berisi `index.html`, folder `assets`, dan `README.md`.
-
-### Langkah 2 — Buat repository
-1. Login di **github.com** (daftar gratis jika belum punya akun).
-2. Klik tombol **+** di kanan atas → **New repository**.
-3. Isi **Repository name**, misalnya `bolang-computer`. Alamat website nanti menjadi `https://USERNAME.github.io/bolang-computer/`.
-   - 💡 Untuk alamat yang lebih pendek (`https://USERNAME.github.io/`), beri nama repository persis `USERNAME.github.io`. Ganti USERNAME dengan username GitHub Anda.
-4. Pilih **Public**, karena GitHub Pages gratis hanya untuk repository publik.
-5. Klik **Create repository**.
-
-### Langkah 3 — Upload file
-1. Di halaman repository yang baru, klik link **uploading an existing file** (atau menu **Add file → Upload files**).
-2. Buka folder hasil ekstrak dan pilih **semua isinya** (`index.html`, folder `assets`, `README.md`). Lalu **seret (drag & drop)** ke halaman GitHub.
-   - Seret **isi foldernya**, bukan foldernya, supaya `index.html` berada paling atas.
-   - Gunakan drag & drop, bukan tombol *choose your files*, agar folder `assets` ikut terunggah lengkap.
-3. Tunggu sampai semua file muncul di daftar, lalu klik **Commit changes**.
-4. Cek halaman repository: harus terlihat `index.html` dan folder `assets` langsung di halaman utama repository.
-
-### Langkah 4 — Aktifkan Pages
-1. Buka tab **Settings** → menu kiri **Pages**.
-2. Di bagian **Build and deployment**:
-   - **Source:** *Deploy from a branch*
-   - **Branch:** `main`, folder `/ (root)`
-   - Klik **Save**.
-3. Tunggu 1–3 menit, lalu refresh halaman. Akan muncul tulisan **"Your site is live at https://USERNAME.github.io/bolang-computer/"**. Website sudah online.
-
-### Mengubah isi setelah online
-- **Edit teks/harga/jam:** buka file di repository (misalnya `assets/js/config.js`), klik ikon **pensil (Edit)**, ubah isinya, lalu klik **Commit changes**. Website ter-update otomatis dalam ±1–10 menit. Tekan Ctrl+F5 di browser jika belum berubah.
-- **Ganti foto:** buka folder `assets/img` → **Add file → Upload files** → unggah foto dengan **nama file yang sama** → **Commit changes**.
-- **Domain sendiri** (opsional, misalnya `bolangcomputer.com`): Settings → Pages → *Custom domain*, lalu atur DNS di tempat Anda membeli domain.
-
-Setelah online, cantumkan link website di **Google Business Profile** (Google Maps) dan bio Instagram agar mudah ditemukan pelanggan.
+### Ganti foto
+Upload foto baru dengan **nama file yang sama** (`hero.jpg`, `workshop.jpg`, `rakit-pc.jpg`) lewat **Add file → Upload files**, lalu klik Commit. Usahakan foto horizontal, lebar ±1200–1400 px, dan ukurannya di bawah 200 KB (kecilkan di squoosh.app atau tinyjpg.com).
 
 ---
 
-## Mengubah data (`assets/js/config.js`)
+## Mengubah data (`config.js`)
 
-Ubah teks **di antara tanda kutip**, simpan, lalu refresh browser.
+Ubah teks **di antara tanda kutip** saja.
 
 ### Data usaha (sudah diisi)
 
@@ -112,22 +79,16 @@ Saat ini **setiap hari 09.00–17.00 WIB**. Untuk hari libur, ubah barisnya menj
 { hari: "Minggu", buka: null, tutup: null },
 ```
 
-Jam buka otomatis dipakai untuk status buka/tutup, tabel jam, pilihan jam di form booking, dan ringkasan di footer.
-
 ### Instagram & media sosial
 Isi **link lengkap** akun Anda. Ikonnya akan muncul otomatis:
 
 ```js
-sosial: {
-  instagram: "https://instagram.com/namaakunanda",
-  tiktok: "",
-  facebook: ""
-},
+instagram: "https://instagram.com/namaakunanda",
 ```
 
 ### Peta
-Saat ini peta mencari alamat toko. Kalau toko sudah terdaftar di Google Maps, hasilnya bisa lebih tepat:
-1. Buka lokasi toko di Google Maps → **Bagikan → Salin link**, lalu tempel ke `mapsLink`.
+Kalau toko sudah terdaftar di Google Maps:
+1. Buka lokasi toko → **Bagikan → Salin link**, lalu tempel ke `mapsLink`.
 2. **Bagikan → Sematkan peta** → salin isi `src="..."` saja, lalu tempel ke `mapsEmbed`.
 
 ### Konten lain
@@ -136,7 +97,7 @@ Saat ini peta mencari alamat toko. Kalau toko sudah terdaftar di Google Maps, ha
 |---|---|
 | `pengumuman` | Teks promo di bar paling atas |
 | `rating`, `statistik` | Rating & 4 angka di bawah hero ⚠️ contoh |
-| `layanan`, `paket`, `daftarHarga` | Layanan, paket, dan tabel harga (`min: 0` = "Gratis") |
+| `layanan`, `paket`, `daftarHarga` | Layanan, paket & tabel harga (`min: 0` = "Gratis") |
 | `testimoni` | Ulasan pelanggan ⚠️ contoh |
 | `faq` | Pertanyaan & jawaban |
 
@@ -147,25 +108,28 @@ Teks yang ditulis langsung di `index.html`:
 - 5 langkah proses;
 - 6 keunggulan;
 - badge **"8+ tahun"** ⚠️ contoh;
-- isi banner Rakit PC.
+- banner Rakit PC.
 
 ---
 
-## Checklist sebelum link disebarkan
+## Checklist
 
 - [x] Nama usaha, WhatsApp, alamat, jam buka
+- [x] Website online di GitHub Pages + gambar pratinjau link
 - [ ] Link Instagram diisi
 - [ ] **Testimoni diganti ulasan asli** (misalnya salin dari Google Maps)
 - [ ] **Rating, statistik & "8+ tahun"** sesuai angka sebenarnya
 - [ ] Harga, paket, garansi & promo sesuai tarif Bolang Computer
 - [ ] Foto diganti foto asli toko/teknisi (disarankan)
 - [ ] Coba isi form booking sampai pesan masuk ke WhatsApp 0878-3536-9249
+- [ ] Cantumkan link website di Google Maps (Google Business Profile) & bio Instagram
 
 ---
 
 ## Catatan teknis
 
-- Form booking **tidak menyimpan data di server**. Pesan disusun di browser pengunjung lalu dibuka di WhatsApp, jadi tanpa database dan tanpa biaya.
+- Form booking **tidak menyimpan data di server**. Pesan disusun di browser pengunjung lalu dibuka di WhatsApp.
 - Status buka/tutup dan tanggal booking selalu mengikuti **WIB**.
-- Peta Google baru dimuat setelah tombol "Tampilkan peta" diklik, agar halaman tetap cepat.
-- File `index-standalone.html` dan `build_standalone.py` di workspace hanya untuk pratinjau satu file, **tidak perlu** diunggah ke GitHub.
+- Pratinjau link memakai alamat lengkap website di `index.html` (tag `og:`). Kalau alamat website berubah (misalnya pindah ke domain sendiri), ganti juga alamat tersebut.
+- WhatsApp menyimpan pratinjau link lama. Jika gambar belum muncul, coba bagikan link dengan tambahan `?v=2` di belakangnya.
+- `index-standalone.html` dan `build_standalone.py` di workspace hanya untuk pratinjau satu file, **tidak perlu** diunggah ke GitHub.
