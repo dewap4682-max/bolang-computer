@@ -34,7 +34,7 @@ window.SITE = {
     // Isi link lengkap akun Anda, mis. instagram: "https://instagram.com/namaakun"
     // Kosongkan ("") jika belum ada — ikonnya otomatis disembunyikan
     sosial: {
-      instagram: "",
+      instagram: "@bolang_computer",
       tiktok: "",
       facebook: ""
     },
@@ -105,7 +105,7 @@ window.SITE = {
      harga: angka "mulai dari" (tanpa titik). Gunakan hargaLabel untuk teks bebas.
      terkait: kata kunci untuk menampilkan rincian harga di jendela detail.
      ------------------------------------------------------------------ */
-  layanan: [
+  layanan: [harga: 150000
     {
       id: "servis-laptop", kategori: "laptop", ikon: "laptop", populer: true,
       nama: "Servis Laptop Gaming & Harian",
@@ -259,7 +259,7 @@ window.SITE = {
     {
       id: "basic", nama: "Basic Care", garansi: "14 hari",
       deskripsi: "Perawatan rutin agar perangkat tetap adem & awet.",
-      harga: { laptop: 100000, pc: 100000 },
+      harga: { laptop: 150000, pc: 100000 },
       fitur: {
         laptop: ["Cleaning kipas & heatsink", "Ganti thermal paste standar", "Cek kesehatan baterai & SSD", "Cek suhu & kipas"],
         pc: ["Cleaning casing, fan & filter debu", "Repaste CPU (paste standar)", "Cek kesehatan PSU & storage", "Cek suhu & kipas"]
@@ -290,7 +290,7 @@ window.SITE = {
      min: harga terendah (0 = Gratis) | max: harga tertinggi (opsional)
      mulai: true -> tampil "mulai Rp..." | satuan: mis. "/titik"
      ------------------------------------------------------------------ */
-  daftarHarga: {
+  daftarHarga: {{ item: "Ganti keyboard", min: 250000, durasi: "1 hari" },
     laptop: [
       { item: "Diagnosa & pengecekan kerusakan", min: 0, durasi: "15–60 menit" },
       { item: "Cleaning + thermal paste (laptop standar)", min: 100000, durasi: "1–2 jam" },
