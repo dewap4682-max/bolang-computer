@@ -119,10 +119,11 @@
       if (/^https?:/i.test(href)) { el.setAttribute('target', '_blank'); el.setAttribute('rel', 'noopener'); }
     });
 
-    if (B.nama) document.title = `${B.nama} — Servis Laptop & PC Gaming di ${B.kota || ''}`.trim();
+    // Judul halaman (SEO) ditulis langsung di <title> index.html — sengaja tidak diubah lewat JavaScript
   }
 
   function injectSchema() {
+    if (document.querySelector('script[type="application/ld+json"][data-static]')) return; // sudah ada versi statis di index.html
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const rows = Object.values(S.daftarHarga || {}).reduce((a, b) => a.concat(b || []), []);
     const lo = rows.map((r) => r.min).filter((n) => n > 0);
