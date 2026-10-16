@@ -31,10 +31,10 @@ window.SITE = {
     // Link embed peta (Google Maps > Bagikan > Sematkan peta > ambil isi src="...")
     mapsEmbed: "https://www.google.com/maps?q=Jl.+Bone+Barat+Utama+No.+15B,+Banyuanyar,+Banjarsari,+Surakarta&output=embed",
 
-    // Isi link lengkap akun Anda, mis. instagram: "https://instagram.com/@bolang_computer"
+    // Isi link lengkap akun Anda, mis. instagram: "https://instagram.com/bolang_computer"
     // Kosongkan ("") jika belum ada — ikonnya otomatis disembunyikan
     sosial: {
-      instagram: "@bolang_computer",
+      instagram: "bolang_computer",
       tiktok: "",
       facebook: ""
     },
