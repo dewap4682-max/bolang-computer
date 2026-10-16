@@ -23,7 +23,19 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232563eb'/%3E%3Cstop offset='1' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='40' rx='12' fill='url(%23g)'/%3E%3Cpath d='M22.6 7.5 12 22.2h7.4l-2 10.3L28 17.8h-7.4l2-10.3Z' fill='white'/%3E%3C/svg%3E">
   <link rel="preload" href="plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    /* Penanda JS + pengaman: jika app.js/config.js gagal dimuat, konten tetap tampil & ada petunjuk */
+    (function (d, w) {
+      d.documentElement.classList.add('js');
+      w.addEventListener('error', function (e) {
+        var src = (e.target && e.target.src) || e.filename || '';
+        if (/config\.js/.test(src)) w.__configError = e.lineno ? 'sekitar baris ' + e.lineno : 'tidak ditemukan';
+      }, true);
+      w.addEventListener('load', function () {
+        setTimeout(function () { if (!w.__siteReady) d.documentElement.classList.remove('js'); }, 1000);
+      });
+    })(document, window);
+  </script>
 </head>
 <body>
 
