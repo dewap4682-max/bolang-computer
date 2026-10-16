@@ -79,13 +79,13 @@ fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
 .skip-link { position: absolute; left: 1rem; top: -100px; z-index: 1000; background: var(--text); color: #fff; padding: .6rem 1rem; border-radius: 10px; font-weight: 700; }
 .skip-link:focus { top: 1rem; }
 
-/* Warna kategori */
+/* Warna kategori (--tint-ink = versi lebih gelap untuk TEKS agar kontras >= 4.5:1) */
 .tint-blue   { --tint: #2563eb; --tint-bg: #eff6ff; }
 .tint-violet { --tint: #7c3aed; --tint-bg: #f5f3ff; }
-.tint-amber  { --tint: #d97706; --tint-bg: #fffbeb; }
-.tint-teal   { --tint: #0d9488; --tint-bg: #f0fdfa; }
+.tint-amber  { --tint: #d97706; --tint-bg: #fffbeb; --tint-ink: #b45309; }
+.tint-teal   { --tint: #0d9488; --tint-bg: #f0fdfa; --tint-ink: #0f766e; }
 .tint-rose   { --tint: #e11d48; --tint-bg: #fff1f2; }
-.tint-green  { --tint: #16a34a; --tint-bg: #f0fdf4; }
+.tint-green  { --tint: #16a34a; --tint-bg: #f0fdf4; --tint-ink: #15803d; }
 
 /* ---------- Tombol ---------- */
 .btn {
@@ -364,7 +364,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 .service-card__points { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .4rem; font-size: .86rem; color: var(--text-2); }
 .service-card__points li { display: flex; gap: .5rem; align-items: flex-start; line-height: 1.45; }
 .service-card__points .ic { width: 15px; height: 15px; color: var(--success); margin-top: .15rem; stroke-width: 3; }
-.service-card__more { display: inline-flex; align-items: center; gap: .35rem; align-self: flex-start; margin: 0 0 1.1rem; padding: 0; border: 0; background: none; color: var(--tint); font-weight: 700; font-size: .84rem; }
+.service-card__more { display: inline-flex; align-items: center; gap: .35rem; align-self: flex-start; margin: 0 0 1.1rem; padding: 0; border: 0; background: none; color: var(--tint-ink, var(--tint)); font-weight: 700; font-size: .84rem; }
 .service-card__more .ic { width: 15px; height: 15px; transition: transform .2s; }
 .service-card__more:hover .ic { transform: translateX(3px); }
 .service-card__foot { margin-top: auto; display: flex; align-items: flex-end; justify-content: space-between; gap: .75rem; padding-top: 1rem; border-top: 1px dashed var(--border); }
@@ -555,6 +555,10 @@ mark { background: #fef08a; color: inherit; border-radius: 3px; padding: 0 .1em;
 .rating-summary { display: flex; align-items: center; gap: .9rem; padding: .8rem 1.15rem; background: #fff; border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow-sm); }
 .rating-summary__score { font-size: 2.1rem; font-weight: 800; color: var(--text); line-height: 1; letter-spacing: -.03em; }
 .rating-summary small { display: block; color: var(--muted); font-size: .8rem; font-weight: 600; margin-top: .15rem; }
+.rating-summary__links { display: flex; flex-wrap: wrap; align-items: center; gap: .1rem .4rem; margin-top: .3rem; font-size: .8rem; font-weight: 700; }
+.rating-summary__links a { color: var(--primary); }
+.rating-summary__links a:hover { text-decoration: underline; }
+.rating-summary__links span { color: var(--muted); }
 .carousel__nav { display: flex; gap: .5rem; }
 .icon-btn { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--border); background: #fff; display: grid; place-items: center; color: var(--text); padding: 0; transition: all .2s; }
 .icon-btn:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }

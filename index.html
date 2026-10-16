@@ -37,6 +37,7 @@
       "@type": "ComputerStore",
       "@id": "https://dewap4682-max.github.io/bolang-computer/#bisnis",
       "name": "Bolang Computer",
+      "alternateName": "Bolang Komputer",
       "description": "Servis laptop & PC gaming di Solo Raya: perbaikan laptop, PC gaming, rakit PC, upgrade SSD/RAM, install ulang, recovery data, servis konsol, printer, jaringan & CCTV.",
       "url": "https://dewap4682-max.github.io/bolang-computer/",
       "image": "https://dewap4682-max.github.io/bolang-computer/og-image.jpg",
@@ -51,7 +52,12 @@
         "postalCode": "57137",
         "addressCountry": "ID"
       },
-      "hasMap": "https://www.google.com/maps/search/?api=1&query=Jl.+Bone+Barat+Utama+No.+15B%2C+Banyuanyar%2C+Banjarsari%2C+Surakarta",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -7.5400891,
+        "longitude": 110.8089478
+      },
+      "hasMap": "https://www.google.com/maps?cid=9278795112570225227",
       "areaServed": [
         {
           "@type": "City",
@@ -90,15 +96,21 @@
             "Tuesday",
             "Wednesday",
             "Thursday",
-            "Friday",
-            "Saturday"
+            "Friday"
           ],
           "opens": "09:00",
           "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
         }
       ],
       "sameAs": [
-        "https://instagram.com/bolang_computer"
+        "https://instagram.com/bolang_computer",
+        "https://www.google.com/maps?cid=9278795112570225227"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -315,9 +327,9 @@
 <!-- ============ HEADER ============ -->
 <header class="header" id="header">
   <div class="container header__inner">
-    <a href="#beranda" class="logo" aria-label="Kembali ke beranda">
+    <a href="#beranda" class="logo">
       <span class="logo__mark"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="url(#logoGrad)"/><path d="M22.6 7.5 12 22.2h7.4l-2 10.3L28 17.8h-7.4l2-10.3Z" fill="#fff"/></svg></span>
-      <span class="logo__text"><strong data-bind="nama">Bolang Computer</strong><small data-bind="subLogo">Servis Laptop & PC Gaming</small></span>
+      <span class="logo__text"><strong data-bind="nama">Bolang Computer</strong> <small data-bind="subLogo">Servis Laptop & PC Gaming</small></span>
     </a>
 
     <nav class="nav" id="nav" aria-label="Navigasi utama">
@@ -360,7 +372,7 @@
         <ul class="hero__trust">
           <li class="hero__rating">
             <span class="avatars" aria-hidden="true"><span style="background:#2563eb">RP</span><span style="background:#7c3aed">DL</span><span style="background:#0d9488">BS</span><span style="background:#e11d48">AN</span></span>
-            <span><span class="stars" aria-label="Rating 5 bintang"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span><br><strong data-bind="ratingNilai">4,9</strong>/5 dari <span data-bind="ratingJumlah">1.200+</span> ulasan</span>
+            <span><span class="stars" role="img" aria-label="Rating 4,1 dari 5" data-stars><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic is-off"><use href="#i-star"/></svg></span><br><strong data-bind="ratingNilai">4,1</strong>/5 dari <span data-bind="ratingJumlah">12</span> ulasan <span data-bind="ratingSumber">Google</span></span>
           </li>
           <li><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>Garansi hingga 90 hari</li>
           <li><svg class="ic" aria-hidden="true"><use href="#i-truck"/></svg>Antar-jemput gratis*</li>
@@ -380,7 +392,7 @@
           <div><small>Servis selesai · QC lulus</small><strong>ROG Strix G15 siap diambil</strong></div>
         </div>
         <div class="float-card float-card--rating">
-          <span class="stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span>
+          <span class="stars" aria-hidden="true"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span>
           <small>“Sekarang adem banget buat main game!”</small>
         </div>
       </div>
@@ -551,10 +563,11 @@
         </div>
         <div class="testi-head__side">
           <div class="rating-summary">
-            <span class="rating-summary__score" data-bind="ratingNilai">4,9</span>
+            <span class="rating-summary__score" data-bind="ratingNilai">4,1</span>
             <div>
-              <span class="stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span>
-              <small>dari <span data-bind="ratingJumlah">1.200+</span> ulasan <span data-bind="ratingSumber">Google</span></small>
+              <span class="stars" aria-hidden="true" data-stars><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic is-off"><use href="#i-star"/></svg></span>
+              <small>dari <span data-bind="ratingJumlah">12</span> ulasan <span data-bind="ratingSumber">Google</span></small>
+              <span class="rating-summary__links"><a href="#" data-href="ulasan">Lihat ulasan</a><span aria-hidden="true">·</span><a href="#" data-href="tulisUlasan">Tulis ulasan</a></span>
             </div>
           </div>
           <div class="carousel__nav">
@@ -704,7 +717,7 @@
           <div class="card contact-card" data-reveal>
             <h3 class="contact-card__title">Kontak & lokasi</h3>
             <ul class="info-list">
-              <li class="tint-blue"><span class="info-list__icon"><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg></span><div><small>Alamat</small><span data-bind="alamat">Jl. Bone Barat Utama No. 15B, Banyuanyar, Banjarsari, Surakarta, Jawa Tengah 57137</span></div></li>
+              <li class="tint-blue"><span class="info-list__icon"><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg></span><div><small>Alamat</small><a href="#" data-href="maps" data-bind="alamat">Jl. Bone Barat Utama No. 15B, Banyuanyar, Banjarsari, Surakarta, Jawa Tengah 57137</a></div></li>
               <li class="tint-green"><span class="info-list__icon"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg></span><div><small>WhatsApp / Telepon</small><a href="#" data-href="wa" data-bind="telepon">0878-3536-9249</a></div></li>
               <li class="tint-violet" hidden><span class="info-list__icon"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><div><small>Email</small><a href="#" data-href="mail" data-bind="email"></a></div></li>
               <li class="tint-amber"><span class="info-list__icon"><svg class="ic" aria-hidden="true"><use href="#i-truck"/></svg></span><div><small>Area layanan</small><span data-bind="area">Kota Solo & sekitarnya</span></div></li>
@@ -713,10 +726,10 @@
               <div class="map__placeholder">
                 <div>
                   <div class="map__pin"><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg></div>
-                  <p><strong data-bind="nama">Bolang Computer</strong><br><span data-bind="kota">Solo</span></p>
+                  <p><strong data-bind="nama">Bolang Computer</strong><br><span>Di Google Maps: “<span data-bind="mapsNama">Bolang Komputer</span>”</span></p>
                   <div class="map__actions">
                     <button type="button" class="btn btn--light btn--sm" data-load-map><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg>Tampilkan peta</button>
-                    <a href="#" data-href="maps" class="btn btn--primary btn--sm">Petunjuk arah<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+                    <a href="#" data-href="rute" class="btn btn--primary btn--sm">Petunjuk arah<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
                   </div>
                 </div>
               </div>
@@ -758,6 +771,7 @@
         <div class="area-note__actions">
           <a href="#booking" class="btn btn--primary"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Booking Servis</a>
           <a href="#" data-href="wa" data-wa-text="Halo {nama}, saya mau tanya servis laptop/PC. Lokasi saya di: " class="btn btn--outline"><svg class="ic ic--wa" aria-hidden="true"><use href="#i-whatsapp"/></svg>Tanya via WhatsApp</a>
+          <a href="#" data-href="maps" class="btn btn--outline"><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg>Lihat di Google Maps</a>
         </div>
       </div>
     </div>
@@ -768,9 +782,9 @@
 <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <a href="#beranda" class="logo logo--light" aria-label="Kembali ke beranda">
+      <a href="#beranda" class="logo logo--light">
         <span class="logo__mark"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="url(#logoGrad)"/><path d="M22.6 7.5 12 22.2h7.4l-2 10.3L28 17.8h-7.4l2-10.3Z" fill="#fff"/></svg></span>
-        <span class="logo__text"><strong data-bind="nama">Bolang Computer</strong><small data-bind="subLogo">Servis Laptop & PC Gaming</small></span>
+        <span class="logo__text"><strong data-bind="nama">Bolang Computer</strong> <small data-bind="subLogo">Servis Laptop & PC Gaming</small></span>
       </a>
       <p class="footer__about">Pusat servis laptop & PC gaming, rakit PC, upgrade, recovery data, konsol, printer, jaringan & CCTV di <span data-bind="kota">Solo</span> dan sekitarnya.</p>
       <div class="socials">
@@ -809,7 +823,7 @@
         <li><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg><span data-bind="alamat">Jl. Bone Barat Utama No. 15B, Banyuanyar, Banjarsari, Surakarta, Jawa Tengah 57137</span></li>
         <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a href="#" data-href="tel" data-bind="telepon">0878-3536-9249</a></li>
         <li hidden><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="#" data-href="mail" data-bind="email"></a></li>
-        <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span data-bind="jamRingkas">Setiap hari 09.00–17.00 WIB</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span data-bind="jamRingkas">Senin–Jumat 09.00–17.00 · Sabtu 09.00–13.00 · Minggu Tutup</span></li>
       </ul>
     </div>
   </div>

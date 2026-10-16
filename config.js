@@ -26,10 +26,18 @@ window.SITE = {
     areaLayanan: "Kota Solo, Colomadu, Ngemplak, Kartasura, Gondangrejo & Solo Raya",
     radiusGratisKm: 5,                        // Radius antar-jemput gratis (km)
 
-    // Link Google Maps (buka Google Maps > Bagikan > Salin link)
-    mapsLink: "https://www.google.com/maps/search/?api=1&query=Jl.+Bone+Barat+Utama+No.+15B%2C+Banyuanyar%2C+Banjarsari%2C+Surakarta",
-    // Link embed peta (Google Maps > Bagikan > Sematkan peta > ambil isi src="...")
-    mapsEmbed: "https://www.google.com/maps?q=Jl.+Bone+Barat+Utama+No.+15B,+Banyuanyar,+Banjarsari,+Surakarta&output=embed",
+    // ---- Google Maps: profil bisnis Anda tercatat sebagai "Bolang Komputer" ----
+    // (ID tempat ChIJJZbSOvwWei4RSwJhZP7mxIA · koordinat -7.5400891, 110.8089478)
+    mapsNama: "Bolang Komputer",
+    // Tombol/link "Lihat di Google Maps" (profil, foto & ulasan)
+    mapsLink: "https://www.google.com/maps/search/?api=1&query=Bolang+Komputer&query_place_id=ChIJJZbSOvwWei4RSwJhZP7mxIA",
+    // Tombol "Petunjuk arah" (langsung membuka rute ke toko)
+    mapsRute: "https://www.google.com/maps/dir/?api=1&destination=Bolang+Komputer&destination_place_id=ChIJJZbSOvwWei4RSwJhZP7mxIA",
+    // Peta di website (Google Maps > Bagikan > Sematkan peta > ambil isi src="...")
+    mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d110.8089478!3d-7.5400891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a16fc3ad29625%3A0x80c4e6fe6461024b!2sBolang%20Komputer!5e0!3m2!1sid!2sid!4v1760600000000",
+    // Ulasan Google: lihat semua ulasan & link agar pelanggan bisa menulis ulasan
+    ulasanLink: "https://search.google.com/local/reviews?placeid=ChIJJZbSOvwWei4RSwJhZP7mxIA",
+    tulisUlasanLink: "https://search.google.com/local/writereview?placeid=ChIJJZbSOvwWei4RSwJhZP7mxIA",
 
     // Isi link lengkap akun Anda, mis. instagram: "https://instagram.com/namaakun"
     // Kosongkan ("") jika belum ada — ikonnya otomatis disembunyikan
@@ -48,21 +56,22 @@ window.SITE = {
       { hari: "Rabu",   buka: "09:00", tutup: "17:00" },
       { hari: "Kamis",  buka: "09:00", tutup: "17:00" },
       { hari: "Jumat",  buka: "09:00", tutup: "17:00" },
-      { hari: "Sabtu",  buka: "09:00", tutup: "17:00" }
+      { hari: "Sabtu",  buka: "09:00", tutup: "13:00" }
     ]
   },
 
   pengumuman: "Diagnosa GRATIS & garansi hingga 90 hari — antar-jemput gratis area Banjarsari & sekitarnya",
 
-  // ⚠️ CONTOH — ganti dengan rating & jumlah ulasan asli (mis. dari Google Maps Anda)
-  rating: { nilai: "4,9", jumlah: "1.200+", sumber: "Google" },
+  // ✅ Data ASLI dari Google Maps "Bolang Komputer" (dicek 16 Okt 2026).
+  //    Perbarui angkanya bila ulasan bertambah (bintang di website ikut menyesuaikan otomatis).
+  rating: { nilai: "4,1", jumlah: "12", sumber: "Google" },
 
   /* ------------------------------------------------------------------
      2. ANGKA STATISTIK (bagian bawah hero)  ⚠️ CONTOH — sesuaikan dengan angka asli
      ------------------------------------------------------------------ */
   statistik: [
     { angka: 5000, akhiran: "+",     label: "Perangkat diservis" },
-    { angka: 4.9,  desimal: 1, akhiran: "/5", label: "Rating pelanggan" },
+    { angka: 4.1,  desimal: 1, akhiran: "/5", label: "Rating Google" },     // ✅ asli (Google Maps)
     { angka: 90,   akhiran: " hari", label: "Garansi servis" },
     { angka: 8,    akhiran: "+ th",  label: "Pengalaman teknisi" }
   ],

@@ -96,7 +96,7 @@
       alamat: B.alamat, area: B.areaLayanan, pengumuman: S.pengumuman,
       radius: B.radiusGratisKm != null ? String(B.radiusGratisKm) : '',
       ratingNilai: R.nilai, ratingJumlah: R.jumlah, ratingSumber: R.sumber,
-      jamRingkas: hoursSummary(), tahun: String(new Date().getFullYear())
+      jamRingkas: hoursSummary(), tahun: String(new Date().getFullYear()), mapsNama: B.mapsNama
     };
     $$('[data-bind]').forEach((el) => {
       const v = values[el.dataset.bind];
@@ -113,11 +113,24 @@
         (el.closest('li') || el).hidden = !href;
       }
       else if (type === 'maps') href = B.mapsLink || '';
+      else if (type === 'rute') href = B.mapsRute || B.mapsLink || '';
+      else if (type === 'ulasan') href = B.ulasanLink || B.mapsLink || '';
+      else if (type === 'tulisUlasan') href = B.tulisUlasanLink || '';
       else if (B.sosial && Object.prototype.hasOwnProperty.call(B.sosial, type)) href = B.sosial[type] || '';
-      if (!href) { if (B.sosial && type in B.sosial) el.hidden = true; return; }
+      if (!href) { if ((B.sosial && type in B.sosial) || ['maps', 'rute', 'ulasan', 'tulisUlasan'].includes(type)) el.hidden = true; return; }
       el.setAttribute('href', href);
       if (/^https?:/i.test(href)) { el.setAttribute('target', '_blank'); el.setAttribute('rel', 'noopener'); }
     });
+
+    // Bintang rating mengikuti nilai di config (mis. "4,1" -> 4 bintang menyala)
+    const nilai = parseFloat(String(R.nilai || '').replace(',', '.'));
+    if (!isNaN(nilai)) {
+      const on = Math.round(Math.min(5, Math.max(0, nilai)));
+      $$('[data-stars]').forEach((el) => {
+        $$('svg', el).forEach((ic, i) => ic.classList.toggle('is-off', i >= on));
+        if (el.getAttribute('role') === 'img') el.setAttribute('aria-label', `Rating ${R.nilai} dari 5`);
+      });
+    }
 
     // Judul halaman (SEO) ditulis langsung di <title> index.html — sengaja tidak diubah lewat JavaScript
   }
@@ -503,7 +516,7 @@
      Testimoni (carousel)
      ------------------------------------------------------------------ */
   function starsHTML(n) {
-    let s = '<span class="stars" aria-label="Rating ' + n + ' dari 5">';
+    let s = '<span class="stars" role="img" aria-label="Rating ' + n + ' dari 5">';
     for (let i = 1; i <= 5; i++) s += `<svg class="ic${i > n ? ' is-off' : ''}" aria-hidden="true"><use href="#i-star"></use></svg>`;
     return s + '</span>';
   }

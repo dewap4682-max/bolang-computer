@@ -6,7 +6,7 @@ Website satu halaman yang interaktif untuk **Bolang Computer**, Jl. Bone Barat U
 Dibuat dengan **HTML, CSS, dan JavaScript murni** (tanpa framework) dan di-hosting gratis di **GitHub Pages**.
 
 > ⚠️ **Masih berupa CONTOH. Sebaiknya diganti:**
-> - testimoni pelanggan, rating "4,9 dari 1.200+ ulasan", angka statistik (5.000+ perangkat, 8+ tahun);
+> - testimoni pelanggan & angka statistik (5.000+ perangkat, 8+ tahun). *(Rating sudah memakai data asli Google Maps: 4,1 dari 12 ulasan.)*
 > - harga layanan & paket, serta promo (diagnosa gratis, garansi 90 hari, antar-jemput gratis radius 5 km);
 > - foto (masih ilustrasi);
 >
@@ -27,6 +27,7 @@ Semua file berada di **satu tempat (tanpa folder)**, jadi mudah diunggah ke GitH
 | `hero.jpg`, `workshop.jpg`, `rakit-pc.jpg` | Foto di website |
 | `og-image.jpg` | Gambar pratinjau saat link dibagikan di WhatsApp/Facebook |
 | `sitemap.xml` | Daftar halaman untuk Google Search Console |
+| `google8a228f14f22995f8.html` | Bukti kepemilikan untuk Google Search Console — **jangan dihapus / diganti nama** |
 | `plus-jakarta-sans.woff2` | Font |
 | `README.md` | Panduan ini |
 
@@ -82,35 +83,50 @@ Upload foto baru dengan **nama file yang sama** (`hero.jpg`, `workshop.jpg`, `ra
 ### Sudah dipasang di website
 - **Judul di Google:** "Servis Laptop & PC Gaming Solo Raya | Bolang Computer", plus deskripsi singkat.
 - **Judul utama (H1)** memuat "Solo Raya", dan ada bagian **Area Layanan Solo Raya** (Solo, Sukoharjo, Karanganyar, Boyolali, Klaten, Sragen, Wonogiri).
-- **Data bisnis untuk Google** (alamat, jam buka, layanan, Instagram) di blok `application/ld+json` pada bagian atas `index.html`.
-  - ⚠️ Jika jam buka, nomor, atau alamat berubah, ubah juga di blok ini.
+- **Data bisnis untuk Google** (alamat, koordinat, jam buka, layanan, Instagram, profil Google Maps) di blok `application/ld+json` pada bagian atas `index.html`.
+  - ⚠️ Jika jam buka, nomor, atau alamat berubah, ubah juga di blok ini **dan** di Google Maps, supaya ketiganya (website, data Google, Google Maps) selalu sama.
+- **Terhubung dengan profil Google Maps "Bolang Komputer"**: peta & tombol *Petunjuk arah* menuju titik toko yang benar, alamat bisa diklik, link *Lihat ulasan* / *Tulis ulasan*, serta nama "Bolang Komputer" dicatat sebagai nama lain di data Google.
 - **`sitemap.xml`**: daftar halaman untuk Google.
 
 ### Langkah 1 — Google Search Console (agar website terdaftar di Google)
+✅ File verifikasi `google8a228f14f22995f8.html` sudah terpasang (16 Okt 2026). Tinggal langkah 4 & 5 bila belum.
+
 1. Buka **https://search.google.com/search-console**, lalu login dengan akun Google.
 2. Pilih **Tambahkan properti → Awalan URL**, isi `https://dewap4682-max.github.io/bolang-computer/`, lalu klik **Lanjutkan**.
 3. Verifikasi dengan **File HTML**:
    - Download file `google….html`.
    - Unggah file itu ke GitHub, di tempat yang sama dengan index.html.
+   - ⚠️ **Nama file harus persis sama** dengan yang diberikan Google (untuk website ini: `google8a228f14f22995f8.html`). Tambahan 1 huruf saja → Google mendapat "404" dan verifikasi gagal.
+   - Cek dulu: buka `https://dewap4682-max.github.io/bolang-computer/google8a228f14f22995f8.html` — harus muncul tulisan `google-site-verification: …`.
    - Klik **Commit**, tunggu 1–2 menit, lalu klik **Verifikasi**.
 4. Buka menu **Peta situs**, ketik `sitemap.xml`, lalu klik **Kirim**.
 5. Buka menu **Inspeksi URL**, tempel alamat website, lalu klik **Minta pengindeksan**.
 
-### Langkah 2 — Google Business Profile (paling berpengaruh untuk pencarian lokal & Google Maps)
-1. Buka **https://business.google.com → Kelola sekarang**.
-   - Jika toko sudah muncul di Google Maps, pilih **Klaim bisnis ini**.
-2. Isi data berikut:
-   - **Nama:** Bolang Computer
-   - **Kategori:** *Layanan perbaikan komputer*
-   - **Alamat:** Jl. Bone Barat Utama No. 15B, Banyuanyar, Banjarsari, Surakarta 57137. Pastikan pin peta tepat.
-   - **Telepon:** 0878-3536-9249
-   - **Situs web:** link website di atas
-3. Lakukan verifikasi sesuai cara yang diminta Google.
-4. Lengkapi profil:
-   - jam buka (Senin–Sabtu 09.00–17.00, Minggu tutup);
-   - foto asli toko & hasil servis;
-   - daftar layanan.
-5. Minta pelanggan memberi **ulasan di Google**. Ulasan asli adalah faktor terbesar untuk muncul di atas pencarian "servis laptop Solo".
+### Langkah 2 — Google Business Profile / Google Maps (paling berpengaruh untuk pencarian lokal)
+Toko **sudah ada** di Google Maps dengan nama **"Bolang Komputer"** (rating 4,1 dari 12 ulasan, 135 foto):
+https://www.google.com/maps/search/?api=1&query=Bolang+Komputer&query_place_id=ChIJJZbSOvwWei4RSwJhZP7mxIA
+
+Yang perlu dirapikan (buka **https://business.google.com** atau cari "Bolang Komputer" di Google saat login, lalu **Edit profil**):
+
+| Data | Kondisi di Google Maps | Ubah menjadi |
+|---|---|---|
+| **Situs web** | ❌ kosong | `https://dewap4682-max.github.io/bolang-computer/` |
+| **Kategori** | Servis Komputer + *Perusahaan Konstruksi, Toko Reklame, Layanan Telemarketing* | Utama tetap **Servis Komputer**. Hapus kategori yang bukan usaha utama, tambahkan **Layanan dan Dukungan Komputer** & **Toko Komputer** |
+| **Alamat** | Jl. Bone Barat Utama … 57131 (tanpa nomor) | Jl. Bone Barat Utama **No. 15B**, Banyuanyar, Banjarsari, Surakarta **57137** |
+| **Deskripsi** | ada salah ketik | pakai teks di bawah |
+| **Jam buka** | Sen–Jum 09.00–17.00, Sab 09.00–13.00, Min tutup | ✅ sudah sama dengan website |
+| **Nama** | Bolang Komputer | Website memakai "Bolang Computer"; data Google di website sudah mencatat kedua nama. Opsional: samakan |
+
+**Deskripsi siap tempel** (± 620 karakter, tanpa link — link tidak diizinkan Google di deskripsi):
+
+> Bolang Komputer (Bolang Computer) melayani servis laptop & PC gaming di Banyuanyar, Banjarsari, Solo. Layanan kami: servis laptop/PC mati total, overheat & layar bergaris, cleaning dan ganti thermal paste, upgrade SSD/RAM/VGA, install ulang Windows, recovery data, rakit PC gaming sesuai budget, serta jual beli laptop & PC. Kami juga mengerjakan instalasi jaringan, lab komputer & lab bahasa, CCTV, maintenance panggilan ke rumah/kantor, dan konsultasi IT. Melayani Kota Solo dan Solo Raya, termasuk Colomadu, Kartasura, Ngemplak, Gondangrejo, Sukoharjo dan Karanganyar. Konsultasi & booking servis mudah lewat WhatsApp.
+
+**Ulasan** — faktor terbesar untuk naik di pencarian "servis laptop Solo":
+- Balas semua ulasan dengan sopan, termasuk 2 ulasan bintang 1.
+- Setelah servis selesai, kirim link ini ke pelanggan lewat WhatsApp:
+  `https://search.google.com/local/writereview?placeid=ChIJJZbSOvwWei4RSwJhZP7mxIA`
+  Contoh pesan: *"Terima kasih sudah servis di Bolang Computer 🙏 Kalau berkenan, bantu kami dengan ulasan singkat di Google ya: (link di atas)"*
+- Setelah ulasan bertambah, perbarui angka `rating` di `config.js`.
 
 ### Tips lain
 - Pakai nama, alamat, dan nomor yang **sama persis** di semua tempat (Google Maps, Instagram, marketplace).
@@ -134,7 +150,7 @@ alamat: "Jl. Bone Barat Utama No. 15B, Banyuanyar, Banjarsari, Surakarta, Jawa T
 ```
 
 ### Jam buka
-Saat ini **Senin–Sabtu 09.00–17.00 WIB, Minggu libur**. Untuk hari libur, ubah barisnya menjadi `buka: null`. Contoh Minggu libur:
+Saat ini **Senin–Jumat 09.00–17.00, Sabtu 09.00–13.00 WIB, Minggu libur** (sama dengan Google Maps). Form booking, status buka/tutup & tabel jam otomatis mengikuti data ini. Untuk hari libur, ubah barisnya menjadi `buka: null`. Contoh Minggu libur:
 
 ```js
 { hari: "Minggu", buka: null, tutup: null },
@@ -147,17 +163,25 @@ Isi **link lengkap** akun Anda. Ikonnya akan muncul otomatis:
 instagram: "https://instagram.com/namaakunanda",
 ```
 
-### Peta
-Kalau toko sudah terdaftar di Google Maps:
-1. Buka lokasi toko → **Bagikan → Salin link**, lalu tempel ke `mapsLink`.
-2. **Bagikan → Sematkan peta** → salin isi `src="..."` saja, lalu tempel ke `mapsEmbed`.
+### Peta & Google Maps (sudah diisi dari profil "Bolang Komputer")
+
+| Isian | Fungsi |
+|---|---|
+| `mapsNama` | Nama toko persis seperti di Google Maps (tampil di kotak peta) |
+| `mapsLink` | Link "Lihat di Google Maps" & alamat yang bisa diklik |
+| `mapsRute` | Tombol **Petunjuk arah** (langsung membuka rute) |
+| `mapsEmbed` | Peta di website (Google Maps → **Bagikan → Sematkan peta** → salin isi `src="..."` saja) |
+| `ulasanLink`, `tulisUlasanLink` | Link **Lihat ulasan** & **Tulis ulasan** di bagian Testimoni |
+
+Link di atas memakai ID tempat Google `ChIJJZbSOvwWei4RSwJhZP7mxIA`, jadi tetap benar walaupun nama/alamat di Google Maps diubah.
 
 ### Konten lain
 
 | Bagian | Fungsi |
 |---|---|
 | `pengumuman` | Teks promo di bar paling atas |
-| `rating`, `statistik` | Rating & 4 angka di bawah hero ⚠️ contoh |
+| `rating` | Rating Google (✅ asli: 4,1 dari 12 ulasan) — perbarui bila ulasan bertambah |
+| `statistik` | 4 angka di bawah hero (rating ✅ asli, sisanya ⚠️ contoh) |
 | `layanan`, `paket`, `daftarHarga` | Layanan, paket & tabel harga (`min: 0` = "Gratis") |
 | `testimoni` | Ulasan pelanggan ⚠️ contoh |
 | `faq` | Pertanyaan & jawaban |
@@ -178,11 +202,14 @@ Teks yang ditulis langsung di `index.html`:
 - [x] Nama usaha, WhatsApp, alamat, jam buka
 - [x] Website online di GitHub Pages + gambar pratinjau link
 - [x] SEO di website (judul, deskripsi, area Solo Raya, data bisnis, sitemap)
-- [ ] Daftar Google Search Console + kirim sitemap.xml
-- [ ] Buat/klaim Google Business Profile
+- [x] File verifikasi Google Search Console terpasang
+- [ ] Search Console: kirim sitemap.xml + minta pengindeksan
+- [x] Website terhubung ke Google Maps "Bolang Komputer" (peta, rute, ulasan, koordinat, jam buka sama)
+- [ ] Rapikan profil Google Maps: situs web, kategori, alamat No. 15B / 57137, deskripsi (lihat Langkah 2)
 - [x] Link Instagram diisi (@bolang_computer)
 - [ ] **Testimoni diganti ulasan asli** (misalnya salin dari Google Maps)
-- [ ] **Rating, statistik & "8+ tahun"** sesuai angka sebenarnya
+- [x] Rating memakai data asli Google (4,1 · 12 ulasan)
+- [ ] **Statistik & "8+ tahun"** sesuai angka sebenarnya
 - [ ] Harga, paket, garansi & promo sesuai tarif Bolang Computer
 - [ ] Foto diganti foto asli toko/teknisi (disarankan)
 - [ ] Coba isi form booking sampai pesan masuk ke WhatsApp 0878-3536-9249
