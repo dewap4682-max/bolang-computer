@@ -23,7 +23,7 @@ window.SITE = {
     teleponTampil: "0878-3536-9249",          // Nomor yang ditampilkan di website
     email: "",                                // Kosongkan jika tidak ada — baris email otomatis disembunyikan
     alamat: "Jl. Bone Barat Utama No. 15B, Banyuanyar, Banjarsari, Surakarta, Jawa Tengah 57137",
-    areaLayanan: "Kota Solo, Colomadu, Ngemplak, Kartasura, Gondangrejo & SoloRya",
+    areaLayanan: "Kota Solo, Colomadu, Ngemplak, Kartasura, Gondangrejo & sekitarnya",
     radiusGratisKm: 5,                        // Radius antar-jemput gratis (km)
 
     // Link Google Maps (buka Google Maps > Bagikan > Salin link)
@@ -34,15 +34,15 @@ window.SITE = {
     // Isi link lengkap akun Anda, mis. instagram: "https://instagram.com/namaakun"
     // Kosongkan ("") jika belum ada — ikonnya otomatis disembunyikan
     sosial: {
-      instagram: "bolang_computer",
+      instagram: "",
       tiktok: "",
       facebook: ""
     },
 
     // Jam buka WIB. Urutan WAJIB dimulai dari Minggu. Isi buka: null jika tutup/libur.
-    // Contoh Minggu libur:  { hari: "Minggu", tutup: null, tutup: null }
+    // Contoh Minggu libur:  { hari: "Minggu", buka: null, tutup: null }
     jamBuka: [
-      { hari: "Minggu", tutup: "09:00", tutup: "17:00" },
+      { hari: "Minggu", buka: "09:00", tutup: "17:00" },
       { hari: "Senin",  buka: "09:00", tutup: "17:00" },
       { hari: "Selasa", buka: "09:00", tutup: "17:00" },
       { hari: "Rabu",   buka: "09:00", tutup: "17:00" },
@@ -259,7 +259,7 @@ window.SITE = {
     {
       id: "basic", nama: "Basic Care", garansi: "14 hari",
       deskripsi: "Perawatan rutin agar perangkat tetap adem & awet.",
-      harga: { laptop: 150000, pc: 100000 },
+      harga: { laptop: 100000, pc: 100000 },
       fitur: {
         laptop: ["Cleaning kipas & heatsink", "Ganti thermal paste standar", "Cek kesehatan baterai & SSD", "Cek suhu & kipas"],
         pc: ["Cleaning casing, fan & filter debu", "Repaste CPU (paste standar)", "Cek kesehatan PSU & storage", "Cek suhu & kipas"]
@@ -290,7 +290,7 @@ window.SITE = {
      min: harga terendah (0 = Gratis) | max: harga tertinggi (opsional)
      mulai: true -> tampil "mulai Rp..." | satuan: mis. "/titik"
      ------------------------------------------------------------------ */
-  daftarHarga: {{ item: "Ganti keyboard", min: 250000, durasi: "1 hari" },
+  daftarHarga: {
     laptop: [
       { item: "Diagnosa & pengecekan kerusakan", min: 0, durasi: "15–60 menit" },
       { item: "Cleaning + thermal paste (laptop standar)", min: 100000, durasi: "1–2 jam" },
