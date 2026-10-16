@@ -40,9 +40,9 @@ window.SITE = {
     },
 
     // Jam buka WIB. Urutan WAJIB dimulai dari Minggu. Isi buka: null jika tutup/libur.
-    // Contoh Minggu libur:  { hari: "Minggu", buka: null, tutup: null }
+    // Contoh Minggu libur:  { hari: "Minggu", tutup: null, tutup: null }
     jamBuka: [
-      { hari: "Minggu", buka: "09:00", tutup: "17:00" },
+      { hari: "Minggu", tutup: "09:00", tutup: "17:00" },
       { hari: "Senin",  buka: "09:00", tutup: "17:00" },
       { hari: "Selasa", buka: "09:00", tutup: "17:00" },
       { hari: "Rabu",   buka: "09:00", tutup: "17:00" },
